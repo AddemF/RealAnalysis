@@ -31,7 +31,31 @@
 
 	Prove there is no rational square-root of 12.}
 
-	%Suppose $a/b=\sqrt{12}$ with $gcd(a,b)=1$ and $b\ne 0$.  Then $a^2 = 12b^2$ which implies $a$ has a factor of 3.  Therefore $a^2$ has two factors of 3.  Therefore $b$ must be furnishing at least one factor of 3, since 12 is only furnishing one.  But then $gcd(a,b) > 1$.
+	Suppose for contradiction $a/b=\sqrt{12}$ with $gcd(a,b)=1$ and $b\ne 0$.  Then $a^2 = 12b^2$ which implies $a$ has a factor of 3.  Therefore $a^2$ has two factors of 3.  Therefore $b$ must be furnishing at least one factor of 3, since 12 is only furnishing one.  But then $gcd(a,b) > 1$.
 
+	{\Large Problem 4
 
+	Show that lowerbounds are less than upperbounds.}
+
+	Let $\emptyset \ne E \subseteq \mathbb{R}$ with lower bound $\alpha$ and upper bound $\beta$.  Let $x\in E$ so that $\alpha\leq x\leq \beta$.
+
+	{\Large Problem 5.
+
+	Show that the inf is the negative sup of the negative set.}
+
+	Let $\emptyset \ne A \subseteq \mathbb{R}$.  We want to argue that
+
+	\begin{align*}
+		\inf A = -\sup (-A)
+	\end{align*}
+
+	and to show that anything is the infimum of a set, we can attempt to show that it is the greatest lower bound.  That means showing 1) it's a lower bound and 2) showing that it's greater than any other lower bound.
+
+	First let's see that $-\sup (-A)$ is a lower bound of $A$ (i.e. part (1)).  So let $x\in A$ and for brevity let's call $s = -\sup(-A)$.  Then $-s = \sup (-A)$ and by definition of $\sup(-A)$ we know that $-s$ is an upper bound of $-A$.  Since $-x\in -A$ it follows that $-x\leq -s$ and so $s\leq x$ as desired.
+
+	Now let's see that $s$ is the greatest lower bound of $A$, so consider some $s'$ which is a lower bound of $A$.  As before we know $-s = \sup (-A)$ and so $-s$ is the least upper bound of $-A$.  We can also claim that $-s'$ is an upper bound of $-A$ because it's a lower bound of $A$.  In the paragraph below prove this claim.
+
+	We want to show that $-s'$ is an upper bound of $-A$ as stated above.  So let $-x\in -A$, then we want $-x\leq -s'$.  This is equivalent to $s' \leq x \in A$.  But since $s'$ was assumed to be a lower bound of $A$ then this inequality must be true.
+
+	To summarize, we now know that $-s'$ is an upper bound of $-A$ and $-s$ is the least upper bound.  These together imply $-s \leq -s'$ so that $s' \leq s$.  But this then demonstrates that $s$ is greater than all other lower bounds of $A$.  That makes $s$ the greatest lower bound, as desired.
 \end{document}
