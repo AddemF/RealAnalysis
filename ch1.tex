@@ -1,15 +1,33 @@
 \documentclass{article}
 
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb, amsfonts}
 
 \begin{document}
 	\begin{center}
 		\LARGE BABY RUDIN CHAPTER 1
 	\end{center}
 
-	{\Large Problem 1}
+	{\Large Problem 1
 
-	{\Large Solution}
+	 If $r\in\mathbb{I}=\mathbb{R}\setminus \mathbb{Q}$ and $x\in\mathbb{Q}$ prove that $r+x, rx \in\mathbb{I}$.}
 
+	By hypothesis there are no integers $a,b$ such that $r=a/b$, but there are integers such that $x=a/b$.  In particular let's say $x=a/b$ where $b\ne 0$ and $gcd(a,b)=1$.  For contradiction suppose $r+x = p/q$ for integers $p,q$.  This would imply 
+	
+	\begin{align*}
+		r = p/q - x = \frac{pb-aq}{bq} \in \mathbb{Q}
+	\end{align*}
+	
+	Also for contradiction assume $rx\in \mathbb{Q}$ and $rx = p/q$ to lazily re-use our old symbols.  Then so long as $a\ne 0$ we have
+	
+	\begin{align*}
+		r = \frac{p}{q}\frac{1}{x} = \frac{pb}{qa} \in \mathbb{Q}
+	\end{align*}
+	
+	and if $a=0$ then of course $rx = ra/b = 0\in\mathbb{Q}$.
+	
+	\pagebreak
+
+	{\Large Problem 2}
+	
 	
 \end{document}
